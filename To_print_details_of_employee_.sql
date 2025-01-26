@@ -1,0 +1,1 @@
+select * from employee where first_name in ('Jennifer', 'James');

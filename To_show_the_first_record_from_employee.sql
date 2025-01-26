@@ -1,0 +1,1 @@
+select * from employee where employee_id = (select min(employee_id) from employee);

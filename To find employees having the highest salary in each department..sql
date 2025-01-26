@@ -1,0 +1,1 @@
+select first_name, last_name, department, max(salary) as 'Max Salary'from employee group by department order by max(salary);

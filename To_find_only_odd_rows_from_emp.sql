@@ -1,0 +1,1 @@
+select * from employee where MOD(employee_id,2)<>0;

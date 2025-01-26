@@ -1,0 +1,1 @@
+select * from employee where employee_id = (select max(employee_id) from employee);

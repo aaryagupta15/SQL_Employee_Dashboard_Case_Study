@@ -1,0 +1,1 @@
+select upper(first_name) as First_Name from employee;

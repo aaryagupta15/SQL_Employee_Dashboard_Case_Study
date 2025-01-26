@@ -1,0 +1,1 @@
+select department, sum(salary) as 'Total Salary' from employee group by department order by sum(salary);
