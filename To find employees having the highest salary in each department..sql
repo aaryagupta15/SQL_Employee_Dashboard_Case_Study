@@ -1,1 +1,2 @@
-select first_name, last_name, department, max(salary) as 'Max Salary'from employee group by department order by max(salary);
+Select first_name, salary, department from employee where salary in (select max(salary) as 'Max Salary'from employee group by department)
+order by salary desc;
