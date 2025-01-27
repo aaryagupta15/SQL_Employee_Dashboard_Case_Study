@@ -1,8 +1,6 @@
 select * from all_students;
 select * from attendance_events;
-select (count(attendance_events.student_id) * 100 / (select count(student_id) from attendance_events)) as Percent
-from attendance_events 
-join all_students 
-on all_students.student_id = attendance_events.student_id
-where month(attendance_events.date_event) = month(all_students.date_of_birth)
-and day(attendance_events.date_event) = day(all_students.date_of_birth);
+select (count(a.student_id) * 100 / (select count(student_id) from all_students)) as 'Percentage' from all_students s
+join attendance_events a on s.student_id = a.student_id
+where month(s.date_of_birth) = month(a.date_event) and day(s.date_of_birth) = day(a.date_event) and
+a.attendance = 'present'
